@@ -24,6 +24,10 @@ emptyListButton.addEventListener("click", emptyList);
 
 function emptyList() {
     alert("Se ha vaciado la lista!")
+    var toDoItems = toDoList.children;
+    while (toDoItems.length > 0) {
+        toDoItems.item(0).remove();
+    }
 }
 
 var saveListButton = document.getElementById("save-button");
