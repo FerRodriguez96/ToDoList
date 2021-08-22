@@ -2,7 +2,9 @@ var addButton = document.getElementById("add-button");
 addButton.addEventListener("click", addToDoItem);
 
 function addToDoItem() {
-    alert("Elemento anadido!")
+    alert("Se ha añadido un elemento!")
+    var itemText = toDoEntryBox.value;
+    newToDoItem(itemText, false);
 }
 
 var clearCompletedButton = document.getElementById("clear-completed-button");
@@ -10,6 +12,11 @@ clearCompletedButton.addEventListener("click", clearCompletedToDoItems);
 
 function clearCompletedToDoItems() {
     alert("Se han limpiado los elementos completados!")
+    var completedItems = toDoList.getElementsByClassName("completed");
+
+    while (completedItems.length> 0) {
+        completedItems.item(0).remove();  
+    }
 }
 
 var emptyListButton = document.getElementById("empty-button");
