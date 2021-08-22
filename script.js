@@ -48,3 +48,11 @@ function newToDoItem(itemText, completed) {
     toDoList.appendChild(toDoItem);
     toDoItem.addEventListener("dblclick", toggleToDoItemState);
 }
+
+function toggleToDoItemState() {
+    if (this.classList.contains("completed")) {
+        this.classList.remove("completed");
+    } else {
+        this.classList.add("completed");
+    }
+}
