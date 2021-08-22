@@ -35,6 +35,21 @@ saveListButton.addEventListener("click", saveList);
 
 function saveList(){
     alert("Se ha guardado la lista!")
+    var toDos = [];
+
+    for (var i = 0; i < toDoList.children.length; i++) {
+        var toDo = toDoList.children.item(i);
+
+        var toDoInfo = {
+            "task": toDo.innerText,
+            "completed": toDo.classList.contains("completed")
+        };
+
+        toDos.push(toDoInfo);
+
+    }
+
+    localStorage.setItem("toDos", JSON.stringify(toDos));
 }
 
 var toDoEntryBox = document.getElementById("todo-entry-box");
