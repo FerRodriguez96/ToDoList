@@ -5,6 +5,8 @@ function addToDoItem() {
     alert("Se ha añadido un elemento!")
     var itemText = toDoEntryBox.value;
     newToDoItem(itemText, false);
+
+    document.getElementById("todo-entry-box").value= "";
 }
 
 var clearCompletedButton = document.getElementById("clear-completed-button");
@@ -86,3 +88,5 @@ function loadList() {
         }
     }
 }
+
+loadList();
