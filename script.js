@@ -18,3 +18,10 @@ emptyListButton.addEventListener("click", emptyList);
 function emptyList() {
     alert("Se ha vaciado la lista!")
 }
+
+var saveListButton = document.getElementById("save-button");
+saveListButton.addEventListener("click", saveList);
+
+function saveList(){
+    alert("Se ha guardado la lista!")
+}
